@@ -1,0 +1,94 @@
+<div class="container ">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="myleftctn">
+                <form #form1="ngForm" class="myform " (ngSubmit)="onSubmit(form1.value)" novalidate>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <br><br>
+                                <label>Display Name:</label>
+                                <input type="text" #name='ngModel' ngModel name="name"  class="form-control"
+                                    id="myinput" placeholder="Change name ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>Location:</label>
+                                <input type="text" #location='ngModel' ngModel name="location"  class="form-control"
+                                    id="myinput" placeholder="Location">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>Title:</label>
+                                <input type="text" #title='ngModel' ngModel name="title"  class="form-control"
+                                    id="myinput" placeholder="Title">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>About:</label>
+                                <textarea class="form-control" #about='ngModel' ngModel rows="5" id="comment" name="about" placeholder="Enter text here"></textarea>
+
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h5>Web Presence</h5>
+                    <ul>
+                        <li>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label><i class='fab fa-facebook-square' style='font-size:23px'></i> facebook:</label>
+                                        <input type="text" #websiteLink='ngModel' ngModel name="websiteLink"  class="form-control"
+                                            id="myinput" placeholder="facebook" >
+                                    </div>
+                                </div>
+                            </div>
+                        </li>&nbsp;
+                        <li>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label><i class='fab fa-twitter-square' style='font-size:23px'></i> Twitter Link:</label>
+                                        <input type="text" #twitterLink='ngModel' ngModel name="twitterLink"  class="form-control"
+                                            id="myinput" placeholder="Twitter handle" >
+                                    </div>
+                                </div>
+                            </div>
+                        </li>&nbsp;
+                        <li>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label> <i class='fab fa-github' style='font-size:23px'></i> Github Link:</label>
+                                        <input type="text" #githubLink='ngModel' ngModel name="githubLink"  class="form-control"
+                                            id="myinput" placeholder="Github">
+                                    </div>
+                                </div>
+                            </div>        
+                        </li>
+                    </ul>  
+                    <br>
+
+                    <button class="btn btn-dark " id="butt" [disabled]='!form1.form.valid'>Submit</button>&nbsp;
+                    <button class="btn btn-outline" id="butt1" routerLink='/user'>Cancle</button><br><br>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>

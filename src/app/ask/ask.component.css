@@ -1,0 +1,48 @@
+
+.bgcontainer{
+    background-color: white;
+   margin-left: 10% ;
+   margin-right: 15%;
+}
+
+.question{
+    margin: 0% 5%;
+    padding: 3% 0%;
+    text-align: justify;
+    color: blueviolet;
+    background-color: white;
+}
+
+.description{
+    padding: 2% 5%;
+    color: black;
+
+}
+
+
+.answer{
+    padding: 2% 5%;
+    color: black;
+
+}
+#butt{
+    background:linear-gradient(45deg,#f046ff,#9b00e8); 
+    color: white;
+    width: 180px;
+    /* margin-left: 70px; */
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+}
+
+#nav1{
+    background: linear-gradient(45deg,#f046ff,#9b00e8);
+
+}
+.effect{
+    color: white;
+}
+.effect:hover{
+    color: blueviolet;
+}

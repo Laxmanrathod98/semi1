@@ -1,0 +1,23 @@
+.container{
+    display: flex-row;
+    justify-content: space-around;
+    align-items: baseline;
+}
+#butt1{
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* margin-right: 50px; */
+    border-radius: 25px;
+    border-width: 1px;
+    border-color:blueviolet ;
+}
+#butt1:hover{
+    color: white;
+    background: linear-gradient(45deg,#f046ff,#9b00e8);
+}
+.h5{
+    justify-content: left;
+    margin: 9px;
+    color:#9b00e8;
+}

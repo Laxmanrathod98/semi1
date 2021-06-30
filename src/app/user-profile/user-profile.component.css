@@ -1,0 +1,50 @@
+#nav1{
+    background: linear-gradient(45deg,#f046ff,#9b00e8);
+
+}
+li a:hover{
+    background: #9b00e8;
+    border-radius: 24px;
+}
+
+li a{
+    padding: 8px;
+}
+a:active {
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+  a:link {
+    color: black;
+  }
+.container{
+    box-shadow: 5px 10p #ca9fe0;
+}
+#a1:active {
+    color: white;
+  }
+  #a1:visited {
+    color: white;
+  }
+  #a1:link {
+    color: white;
+  }
+  #butt1{
+    color: black;
+    width: 150px;
+    margin-left: -10px;
+   justify-content: center;
+  
+    border-radius: 25px;
+    border-width: 1px;
+    border-color:blueviolet ;
+    padding: 10px;
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);   
+}
+#butt1:hover{
+  background:linear-gradient(45deg,#f046ff,#9b00e8);
+  color: white;
+  border-color:white;
+}

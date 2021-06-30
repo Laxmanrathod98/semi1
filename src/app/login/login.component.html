@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark" id="nav1">
+    <!-- Brand -->
+    <a class="navbar-brand" routerLink="/questions">CodeMiner</a>
+  
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        
+        <li  class="nav-item">
+        <li  class="nav-item">
+         
+        </li>&nbsp;&nbsp;
+        
+        <li class="nav-item">
+          <button class="nav-link btn btn-outline-light" routerLink='/register'  > <div class="effect">Register</div></button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+<div class="container ">
+    <div class="mycard">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="myleft">
+                    <form #loginform1="ngForm" class="myform text-center" (ngSubmit)="onSubmit(loginform1.value)" novalidate>
+
+                        <header class="text-center">Login to your account</header>
+
+                        <br>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    
+                                    <input type="email" ngModel required name="email" class="form-control" id="myinput"
+                                        placeholder="Email">
+                                    <!-- <small class="text-danger" [class.d-none]='email.valid || email.untouched'>Email is required</small> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+
+                                    <input type="password" name="pass" ngModel required class="form-control"
+                                        id="myinput" placeholder="Password">
+                                    <!-- <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">This is required</small> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div ngModelaGroup="Address"> -->
+
+
+
+
+                        <br>
+                        <button class="btn btn-primary" id="butt" >LogIn</button>
+                        <br>
+                        <span id="demo"></span>
+                        <br><br>
+                        <a routerLink="/forgot">Forgot password ?</a>
+                        <br><br>
+                        <h6>Don't have an account ? please <a routerLink="/register">Register here</a></h6>
+
+                        <br>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="myright">
+                    <img src="https://image.shutterstock.com/image-illustration/portrait-cartoon-beard-character-man-260nw-1936155157.jpg"  style="border-radius: 20px;" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <h4 class="display-4" style="text-align: center;">Form</h4> -->
+
+</div>

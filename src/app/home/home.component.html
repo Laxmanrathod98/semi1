@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark" id="nav1">
+    <!-- Brand -->
+    <a class="navbar-brand" routerLink="/questions">CodeMiner</a>
+  
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        
+        <li  class="nav-item">
+        <li  class="nav-item">
+           <img src="https://image.flaticon.com/icons/png/512/16/16363.png" routerLink='/user' width="45px">
+          <!-- <button class="nav-link btn btn-outline-light" routerLink='/director' >User profile</button> -->
+        </li>&nbsp;&nbsp;
+        
+        <li class="nav-item">
+          <button class="nav-link btn btn-outline-light" routerLink='/login'  > <div class="effect">Logout</div></button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- <div class="bgcontainer">
+        <div class="button">
+            <a href="http://localhost:4200/ask" class="btn btn-primary" id="butt" role="button">Ask Question</a>
+        </div>
+        <h2 class="title">Top Questions</h2>
+        <hr>
+        <div *ngFor="let items of arrayQ" (click)="loadque(items)">
+            <div class="btn btn-group">
+                <pre style="font-size:20px;">   {{items.views}}  </pre>
+                <pre style="font-size:20px;">  {{votes}}  </pre>
+                <pre style="font-size:20px;">   {{items.answer.length}}  </pre>
+                <h4 class="text-primary">{{items.title}} </h4>
+            </div><br>
+            <div class="btn btn-group" style="margin-top: -40px; margin-bottom: -10px; ">
+                <pre>  <b>Views</b></pre>
+                <pre>  <b>Votes</b></pre>
+                <pre>  <b>Answers</b></pre>
+                <div class="tags">
+                    <span class="badge badge-dark p-2 ml-1"
+                    *ngFor="let item of items.tag let i=index">{{items.tag[i].item_text}}
+                    </span>
+
+                </div>
+            </div>
+            <div>
+              <pre style="font-size:20px;float: right;margin: 19px;">{{items.email}}</pre>
+            </div>
+            <hr>
+          </div>
+</div> -->
+
+<div class="bgcontainer">
+  <div class="button">
+      <a href="http://localhost:4200/ask" class="btn btn-primary" id="butt" role="button">Ask Question</a>
+  </div>
+  <h2 class="title">Top Questions</h2>
+  <hr>
+  <div *ngFor="let items of arrayQ" (click)="loadque(items)">
+      <div class="btn btn-group">
+          <pre style="font-size:20px;">   {{items.views}}  </pre>
+          <pre style="font-size:20px;">  {{items.votes}}  </pre>
+          <pre style="font-size:20px;">   {{items.answer.length}}  </pre>
+          <h4 class="text-primary">{{items.title}} </h4>
+      </div><br>
+      <div class="btn btn-group" style="margin-top: -40px; margin-bottom: -10px; ">
+          <pre>  <b>Views</b></pre>
+          <pre>  <b>Votes</b></pre>
+          <pre>  <b>Answers</b></pre>
+          <div class="tags">
+              <span class="badge badge-dark p-2 ml-1"
+              *ngFor="let item of items.tag let i=index">{{items.tag[i].item_text}}
+              </span>
+
+          </div>
+      </div>
+      <div>
+        <pre style="font-size:20px;float: right;margin-top:-30px;">Asked by<b> {{items.email}}</b> </pre>
+      </div>
+      <hr>
+    </div>
+</div>
+    
+

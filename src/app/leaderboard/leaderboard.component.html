@@ -1,0 +1,19 @@
+<div style="text-align: center;">
+    <h1>Leader Board</h1>
+</div>
+<table class="table table-hover" style="text-align: center;">
+    <tbody>
+        <tr>
+            <th>Ranking</th>
+            <th>Name</th>
+            <th>Points</th>
+            <th>Location</th>
+        </tr>
+        <tr *ngFor="let item of userdata ;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{item.name}} {{item.lname}}</td>
+            <td>{{item.points}}</td>
+            <td>{{item.location}}</td>
+        </tr>
+    </tbody>
+</table>

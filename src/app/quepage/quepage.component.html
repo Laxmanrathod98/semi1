@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark" id="nav1">
+    <!-- Brand -->
+    <a class="navbar-brand" routerLink="/questions">CodeMiner</a>
+  
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li  class="nav-item">
+        <li  class="nav-item">
+           <img src="https://image.flaticon.com/icons/png/512/16/16363.png" routerLink='/user' width="45px">
+          <!-- <button class="nav-link btn btn-outline-light" routerLink='/director' >User profile</button> -->
+        </li>&nbsp;&nbsp;
+        <li class="nav-item">
+          <button class="nav-link btn btn-outline-light" routerLink='/login'  > <div class="effect">Logout</div></button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+
+<div class="bgcontainer" *ngFor="let data of iddata">
+    <div class="button">
+        <a routerLink='/ask' class="btn btn-primary" id="butt" role="button">Ask Question</a>
+    </div>
+    <div class="question">
+        <h2>{{data.title}} </h2>
+    </div>
+    <!-- <button class="btn btn-primary" (click)="upvote()">upvote</button>
+    <button class="btn btn-danger" (click)="downvote()">downvote</button> -->
+
+    <div class="row">
+      <div class="col-1" >
+        <button class="btn btn-primary m-2" (click)="upvote()" ><i class="fa fa-thumbs-up"></i></button>
+        <button class="btn m-2" >{{votes}}</button>
+        <button class="btn btn-danger m-2" (click)="downvote()"><i class="fa fa-thumbs-down"></i></button>
+      </div>
+      <div class="col-11">
+        <div class="container">
+          <div class="jumbotron">
+                  <p [innerHtml]="texthtml"> </p>
+          </div>
+      </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="container" id="con">
+        <div class="jumbotron">
+                <p [innerHtml]="texthtml"> </p>
+        </div>
+    </div> -->
+     <div class="description">
+    <h6> Related to <span class="badge badge-secondary p-1 m-1" *ngFor="let item of data.tag let i=index">{{data.tag[i].item_text}}</span></h6>    
+    </div>
+
+    
+       
+        <b id="m1">Previous Answers</b>
+    <div class="container" id="con">
+        <ul *ngFor='let i of data.answer' id="ul1">
+            <li><button class="btn btn-primary m-2" (click)='ansUpVote(i._id)'><i class="fa fa-thumbs-up"></i></button>
+              <button class="btn m-2" >{{i.votes}}</button>
+              <button class="btn btn-primary m-2" (click)='ansDownVote(i._id)'><i class="fa fa-thumbs-down"></i></button>
+              {{i.answer}}  given by {{i.email}}</li>
+            <hr>
+        </ul>
+    </div>
+    <form #answerpost="ngForm" (ngSubmit)="onSubmit(answerpost)">
+        <div class="answer">
+            <h6>Your Answer</h6>
+            <!-- <textarea class="form-control" id="exampleFormControlTextarea1" required #answer='ngModel' name="answer" id="answer" placeholder="Type Here..."
+             ngModel rows="7"></textarea> -->
+             <div class="NgxEditor__Wrapper">
+                <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+                <ngx-editor
+                  [editor]="editor"
+                  [ngModel]="html"
+                  [disabled]="false"
+                  [placeholder]="'Type here...'"
+                  #answer='ngModel'
+                  name="answer"
+                ></ngx-editor>
+              </div>
+             
+            <button class="btn btn-primary pt-2 mt-3" id="butt">Post your answer</button>
+        </div>
+    </form>
+</div>

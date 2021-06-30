@@ -1,0 +1,15 @@
+<div class="container">
+    <h5 class="h5">Upload Your Profile Image</h5>
+    <hr />
+    <form [formGroup]="form" (submit)="onSubmit()" class="form">
+        <div>
+            <input formControlName="email" type="text" placeholder="Enter email..." style="display: none;" />
+        </div>
+        <div>
+            <input (change)="onFileSelect($event)" type="file" class="input" />
+        </div>
+        <div>
+            <button class="btn btn-outline" id="butt1" type="submit">Upload profile</button>
+        </div>
+    </form>
+</div>

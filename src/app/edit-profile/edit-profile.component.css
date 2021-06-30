@@ -1,0 +1,30 @@
+li{
+    display: inline-block;
+}
+.container{
+    justify-content: center;
+    align-items: center;
+}
+#butt{
+    background:linear-gradient(45deg,#f046ff,#9b00e8); 
+    color: white;
+    width: 150px;
+    /* margin-left: 70px; */
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+  
+}
+
+#butt1{
+    color: black;
+    width: 150px;
+    /* margin-left: 70px; */
+   
+    border-radius: 25px;
+    border-width: 1px;
+    border-color:blueviolet ;
+    padding: 10px;
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);   
+}
